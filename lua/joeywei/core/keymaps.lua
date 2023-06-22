@@ -59,3 +59,17 @@ vim.api.nvim_set_keymap("n", "<Leader>b", "<cmd>HopWordBC<CR>", opts)
 vim.api.nvim_set_keymap("n", "<Leader>w", "<cmd>HopWordAC<CR>", opts)
 vim.api.nvim_set_keymap("n", "<Leader>j", "<cmd>HopLineAC<CR>", opts)
 vim.api.nvim_set_keymap("n", "<Leader>k", "<cmd>HopLineBC<CR>", opts)
+
+-- saga
+keymap("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
+keymap("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>")
+keymap("n", "<leader>o", "<cmd>Lspsaga outline<CR>")
+keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
+keymap("n", "gr", "<cmd>Lspsaga lsp_finder<CR>")
+keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
+keymap("n", "gt", "<cmd>Lspsaga peek_type_definition<CR>")
+
+-- lspconfig
+local opts2 = { noremap = true, silent = true, buffer = bufnr}
+keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts2) -- got to declaration
+keymap("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opts2) -- got to declaration

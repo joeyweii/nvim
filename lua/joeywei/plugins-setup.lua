@@ -89,6 +89,25 @@ return packer.startup(function(use)
     -- git
     use("tpope/vim-fugitive")
 
+    -- managing & installing lsp servers
+    use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
+    use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
+
+    -- lsp
+    use("neovim/nvim-lspconfig")
+    use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
+    use({
+        "glepnir/lspsaga.nvim",
+        branch = "main",
+        requires = {
+            { "nvim-tree/nvim-web-devicons" },
+            { "nvim-treesitter/nvim-treesitter" },
+        },
+    }) -- enhanced lsp uis
+
+    -- null-ls
+    use("jose-elias-alvarez/null-ls.nvim")
+
     if packer_bootstrap then
         require("packer").sync()
     end
