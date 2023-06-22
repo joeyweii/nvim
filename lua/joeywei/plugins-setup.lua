@@ -45,6 +45,17 @@ return packer.startup(function(use)
     -- comment
     use("numToStr/Comment.nvim")
 
+    -- autocompletion
+    use("hrsh7th/nvim-cmp") -- completion plugin
+    use("hrsh7th/cmp-buffer") -- source for text in buffer
+    use("hrsh7th/cmp-path") -- source for file system paths
+    use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+
+    -- snippets
+    use("L3MON4D3/LuaSnip") -- snippet engine
+    use("saadparwaiz1/cmp_luasnip") -- for autocompletion
+    use("rafamadriz/friendly-snippets") -- useful snippets
+
     if packer_bootstrap then
         require("packer").sync()
     end
