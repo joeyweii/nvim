@@ -50,3 +50,12 @@ keymap("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", opts) -- find string i
 keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", opts) -- find string under cursor in current working directory
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts) -- list open buffers in current neovim instance
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts) -- list available help tags
+
+-- undo tree
+keymap('n', '<leader>u',"<cmd>lua vim.cmd.UndotreeToggle<CR>", opts)
+
+-- hop
+vim.api.nvim_set_keymap("n", "<Leader>b", "<cmd>HopWordBC<CR>", opts)
+vim.api.nvim_set_keymap("n", "<Leader>w", "<cmd>HopWordAC<CR>", opts)
+vim.api.nvim_set_keymap("n", "<Leader>j", "<cmd>HopLineAC<CR>", opts)
+vim.api.nvim_set_keymap("n", "<Leader>k", "<cmd>HopLineBC<CR>", opts)

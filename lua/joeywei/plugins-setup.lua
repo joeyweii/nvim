@@ -80,6 +80,12 @@ return packer.startup(function(use)
     use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
     use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
+    -- undo tree
+    use("mbbill/undotree")
+
+    -- hop
+    use("phaazon/hop.nvim")
+
     if packer_bootstrap then
         require("packer").sync()
     end
