@@ -45,6 +45,10 @@ return packer.startup(function(use)
     -- comment
     use("numToStr/Comment.nvim")
 
+    -- file explorer
+	use("nvim-tree/nvim-tree.lua")
+	use("nvim-tree/nvim-web-devicons") -- vs-code like icons
+
     -- autocompletion
     use("hrsh7th/nvim-cmp") -- completion plugin
     use("hrsh7th/cmp-buffer") -- source for text in buffer

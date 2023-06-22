@@ -40,3 +40,6 @@ keymap("n", "<leader>9", "9gt", opts)
 
 -- vim-maximizer
 keymap("n", "<leader>sm", ":MaximizerToggle<CR>", opts) -- toggle split window maximization
+
+-- nvim-tree
+keymap("n", "<leader>t", ":NvimTreeToggle<CR>", opts) -- toggle file explorer
