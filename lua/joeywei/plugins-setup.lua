@@ -86,6 +86,9 @@ return packer.startup(function(use)
     -- hop
     use("phaazon/hop.nvim")
 
+    -- git
+    use("tpope/vim-fugitive")
+
     if packer_bootstrap then
         require("packer").sync()
     end
