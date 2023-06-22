@@ -33,3 +33,10 @@ keymap("n", "<leader>6", "6gt", opts)
 keymap("n", "<leader>7", "7gt", opts)
 keymap("n", "<leader>8", "8gt", opts)
 keymap("n", "<leader>9", "9gt", opts)
+
+----------------------
+-- Plugin Keybinds
+----------------------
+
+-- vim-maximizer
+keymap("n", "<leader>sm", ":MaximizerToggle<CR>", opts) -- toggle split window maximization
