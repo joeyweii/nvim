@@ -52,7 +52,7 @@ keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts) -- list open buffe
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts) -- list available help tags
 
 -- undo tree
-keymap('n', '<leader>u',"<cmd>lua vim.cmd.UndotreeToggle<CR>", opts)
+keymap("n", "<leader>u",  vim.cmd.UndotreeToggle, opts)
 
 -- hop
 vim.api.nvim_set_keymap("n", "<Leader>b", "<cmd>HopWordBC<CR>", opts)
