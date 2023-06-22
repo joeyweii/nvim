@@ -60,6 +60,9 @@ return packer.startup(function(use)
     use("saadparwaiz1/cmp_luasnip") -- for autocompletion
     use("rafamadriz/friendly-snippets") -- useful snippets
 
+    -- statusline
+    use("nvim-lualine/lualine.nvim")
+
     if packer_bootstrap then
         require("packer").sync()
     end
