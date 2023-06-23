@@ -109,6 +109,9 @@ return packer.startup(function(use)
     -- null-ls
     use("jose-elias-alvarez/null-ls.nvim")
 
+    -- trouble
+    use("folke/trouble.nvim")
+
     if packer_bootstrap then
         require("packer").sync()
     end
