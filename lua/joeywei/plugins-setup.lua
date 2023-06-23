@@ -36,7 +36,7 @@ return packer.startup(function(use)
     use("nvim-lua/plenary.nvim")
 
     -- prefered scheme
-    use("bluz71/vim-nightfly-guicolors")
+    use("bluz71/vim-moonfly-colors")
 
     -- tmux & split window navigation
     use("christoomey/vim-tmux-navigator")
@@ -75,6 +75,7 @@ return packer.startup(function(use)
             ts_update()
         end,
     })
+    use("nvim-treesitter/playground")
 
     -- auto closing
     use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...

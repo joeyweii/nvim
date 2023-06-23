@@ -5,41 +5,43 @@ if not lualine_status then
     return
 end
 
--- get lualine nightfly theme
-local lualine_nightfly = require("lualine.themes.nightfly")
+-- get lualine moonfly theme
+local lualine_moonfly = require("lualine.themes.moonfly")
 
 -- new colors for theme
 local new_colors = {
+    grey = "#CBCBC4",
     blue = "#65D1FF",
     green = "#3EFFDC",
     violet = "#FF61EF",
     yellow = "#FFDA7B",
-    black = "#000000",
+    black = "#080808",
 }
 
--- change nightlfy theme colors
-lualine_nightfly.normal = {
+-- change moonfly theme colors
+lualine_moonfly.normal = {
     a = {
         gui = "bold",
-        bg = new_colors.blue,
+        bg = new_colors.grey,
         fg = new_colors.black, -- black
     },
 }
-lualine_nightfly.insert = {
+lualine_moonfly.insert = {
     a = {
         gui = "bold",
         bg = new_colors.yellow,
         fg = new_colors.black, -- black
+
     },
 }
-lualine_nightfly.visual = {
+lualine_moonfly.visual = {
     a = {
         gui = "bold",
         bg = new_colors.violet ,
         fg = new_colors.black, -- black
     },
 }
-lualine_nightfly.command = {
+lualine_moonfly.command = {
     a = {
         gui = "bold",
         bg = new_colors.green,
@@ -50,6 +52,6 @@ lualine_nightfly.command = {
 -- configure lualine with modified theme
 lualine.setup({
     options = {
-        theme = lualine_nightfly,
+        theme = lualine_moonfly,
     },
 })
