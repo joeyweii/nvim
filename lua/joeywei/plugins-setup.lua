@@ -105,6 +105,7 @@ return packer.startup(function(use)
             { "nvim-treesitter/nvim-treesitter" },
         },
     }) -- enhanced lsp uis
+    use("ray-x/lsp_signature.nvim") -- show function signature
 
     -- trouble
     use("folke/trouble.nvim")
