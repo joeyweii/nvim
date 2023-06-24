@@ -73,6 +73,9 @@ keymap("n", "gt", "<cmd>Lspsaga peek_type_definition<CR>")
 local opts2 = { noremap = true, silent = true, buffer = bufnr}
 keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts2) -- got to declaration
 keymap("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opts2) -- got to declaration
+keymap('n', 'gf', function()
+    vim.lsp.buf.format { async = true }
+end, opts)
 
 -- trouble
 keymap("n", "<leader>d", "<cmd>TroubleToggle<cr>", opts)

@@ -29,8 +29,15 @@ lspconfig.clangd.setup({
     capabilities = capabilities,
     cmd = {
         "clangd",
-        "--offset-encoding=utf-16",
+        "--clang-tidy"
     },
+    filetypes = { "c", "cpp"},
+    on_attach = function(client)
+        -- Enable formatting
+        client.resolved_capabilities.document_formatting = true
+        -- Set up additional formatting options
+        client.resolved_capabilities.document_range_formatting = true
+    end,
 })
 
 lspconfig.cmake.setup({

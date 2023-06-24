@@ -106,9 +106,6 @@ return packer.startup(function(use)
         },
     }) -- enhanced lsp uis
 
-    -- null-ls
-    use("jose-elias-alvarez/null-ls.nvim")
-
     -- trouble
     use("folke/trouble.nvim")
 
