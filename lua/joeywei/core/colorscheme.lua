@@ -17,15 +17,18 @@ vim.cmd([[
     hi! link Character String
     hi! link @constant.builtin String
     hi! link @string.escape String
+    hi! link @error String
 
-    hi! link @include @repeat
-    hi! link @preproc @repeat
-    hi! link @define @repeat
     hi! link @keyword.operator @repeat
-    hi! link @function.macro @repeat
 
     hi! link @constructor Function
     hi! link @function.call Function
+    hi! link @function.macro Function
+
+    hi PreProc guifg=#3c00f9
+    hi! link @define PreProc
+    hi! link @preproc PreProc
+    hi! link @include PreProc
 
     hi! link @parameter Variable
     hi! link @constant Variable
@@ -36,7 +39,7 @@ vim.cmd([[
     hi! link @Identifier Variable
     hi! link @identifier Variable
 
-    hi! link @namespace MoonflyOrchid
+    hi @namespace guifg=#ecacb6
     hi! link @type.qualifier @namespace
     hi! link @storageclass @namespace
 ]])
