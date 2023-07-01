@@ -25,7 +25,7 @@ vim.cmd([[
     hi! link @function.call Function
     hi! link @function.macro Function
 
-    hi PreProc guifg=#3c00f9
+    hi! link PreProc @repeat
     hi! link @define PreProc
     hi! link @preproc PreProc
     hi! link @include PreProc
