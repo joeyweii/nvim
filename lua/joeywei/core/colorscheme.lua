@@ -42,4 +42,7 @@ vim.cmd([[
     hi @namespace guifg=#ecacb6
     hi! link @type.qualifier @namespace
     hi! link @storageclass @namespace
+
+    hi! link HopNextKey MoonflyBlue
+    hi! link HopNextKey1 MoonflyYellow
 ]])
